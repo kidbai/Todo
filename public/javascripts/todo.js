@@ -4,14 +4,19 @@ $(function(){
         $(".wrap .content .list .add-list-input").addClass("on");
         $(".wrap .content .list input").focus();
         $(".wrap .content .list").addClass("on");
-        $(".wrap .content .save-btn").addClass("on");
-        $(".wrap .content .close-btn").addClass("on");
     });
-    $(".wrap .content .close-btn").click(function(){
-        $(".wrap .content .list span").removeClass("off");
-        $(".wrap .content .list .add-list-input").removeClass("on");
-        $(".wrap .content .list").removeClass("on");
-        $(".wrap .content .save-btn").removeClass("on");
-        $(".wrap .content .close-btn").removeClass("on");
+    $(".wrap").click(function(ev){
+        console.log(ev.target);
+        var target_area = $(".wrap .content .list");
+        if(!target_area.is(ev.target) && target_area.has(ev.target).length === 0)
+        {
+            $(".wrap .content .list span").removeClass("off");
+            $(".wrap .content .list .add-list-input").removeClass("on");
+            $(".wrap .content .list").removeClass("on");
+        }
+    });
+    $(".wrap .content .save-btn").click(function(){
+        var todo_title = $(this).siblings(".list").children("input").val();
+        console.log(todo_title);
     });
 });

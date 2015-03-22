@@ -56,5 +56,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(3000);
+app.listen(3000, function(){
+  console.log("listen port at 3000");
+});
 module.exports = app;
