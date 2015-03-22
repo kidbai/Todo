@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Todo</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/font-awesome.min.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+   <div class="wrap">
+       <div class="header">
+           <div class="title">
+               Todo
+           </div>
+       </div>
+       <div class="content">
+           <div class="add-list">
+               <div class="list">
+                   <span>Add a list..</span>
+                   <input type="text" class="add-list-input" placehoder="Add a list..">
+               </div>
+               <div class="save-btn">
+                   Save
+               </div>
+               <div class="close-btn">
+                   Close
+               </div>
+           </div>
+       </div>
+   </div> 
+   <script src="javascripts/jquery-1.11.1.min.js"></script>
+   <script src="javascripts/todo.js"></script>
   </body>
 </html>
